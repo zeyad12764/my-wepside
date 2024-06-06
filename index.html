@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; font-size: 3em;">
+            <span style="color: rgb(236, 236, 236);">مرحبًا</span>
+            <span style="color: red;">بك</span>
+            <button id="change-language" style="font-size: 0.5em;">استمتع بوقتك الثمين</button>
+        </h1>
+    </header>
+    <main>
+        <div class="box left">
+            <h2>معلومات عني</h2>
+            <p> مرحبا بك تشرفت بلقائك استمتع بالنوقع البسيط قيد التطوير الاسم :زياد  </p>
+        </div>
+        <div class="box right">
+            <p>بواسطة ZEYAD FAIF</p>
+            <a href="https://www.youtube.com/channel/UCZTQ2kCy88ZYyIQpLKnxSmg">رابط قناتي</a>
+            <img src="d:\تنزيل\مونتاج\ai\Killua Zoldyck  1.png" alt="Channel Image" style="width: 100%;">
+        </div>
+        <div class="box center">
+            <h2>العاب يفضلها زياد</h2>
+            <p>ماين كرافت و روبلوكس</p>
+        </div>
+        <div class="gallery">
+            <h2>ضع صورك</h2>
+            <button id="add-image">إضافة صورة</button>
+
+            
+            <button id="open-gallery">
+            <input type="file" id="image-input" style="display: none;">
+            <div class="image-grid" id="image-grid">
+                <!-- الصور ستضاف هنا -->
+            </div>
+        </div>
+<input type="file" id="imageInput" accept="image/*" style="display:none;">
+<button onclick="document.getElementById('imageInput').click();">فتح المعرض</button>
+<div id="selectedImageContainer"></div>
+
+<script>
+    document.getElementById('imageInput').addEventListener('change', function(e) {
+        var selectedImage = e.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var imgElement = document.createElement('img');
+            imgElement.src = event.target.result;
+            document.getElementById('selectedImageContainer').appendChild(imgElement);
+        }
+        reader.readAsDataURL(selectedImage);
+    });
+</script>
+<button onclick="deleteImage()">مسح الصور</button>
+
+<script>
+    function deleteImage() {
+        var selectedImageContainer = document.getElementById('selectedImageContainer');
+        while (selectedImageContainer.firstChild) {
+            selectedImageContainer.removeChild(selectedImageContainer.firstChild);
+        }
+    }
+</script>
+
+
+    </main>
+    <footer>
+        <p></p>
+    </footer>
+    <script src="script.js"></script>
+
+
+    
+
+
+
+
+
+    
+
+</body>
+</html>

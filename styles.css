@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('d:\تنزيل\مونتاج\ai\Killua Zoldyck  1.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: #373ddf;
+    color: rgb(251, 0, 0);
+    text-align: center;
+    padding: 1em 0;
+}
+
+
+
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid rgb(81, 222, 182);
+    background-color: rgb(203, 245, 173);
+}
+
+.left {
+    width: 25%;
+    order: 1;
+}
+
+.right {
+    width: 25%;
+    order: 3;
+}
+
+.center {
+    width: 50%;
+    order: 2;
+    text-align: center;
+    background-color: #42e4b9;
+}
+
+.gallery {
+    width: 100%;
+    order: 4;
+    margin: 20px 0;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-grid img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.uploaded-image {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+
+footer {
+}
